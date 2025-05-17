@@ -106,7 +106,67 @@ export default function HomePage() {
           </Accordion>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8">
+        {/* Decorative SVG divider */}
+        <div className="w-full px-4 sm:px-6 lg:px-8 my-2 md:my-4">
+          <svg
+            className="w-full h-auto max-h-20 md:max-h-28" // Adjusted height
+            viewBox="0 0 800 100"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <style>
+              {`
+                .ink-stroke {
+                  stroke: hsl(var(--muted-foreground));
+                  stroke-width: 2;
+                  fill: none;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  opacity: 0.7;
+                }
+                .quill-body {
+                  fill: hsl(var(--foreground));
+                  opacity: 0.6;
+                }
+                .quill-nib {
+                  fill: hsl(var(--primary));
+                  opacity: 0.9;
+                }
+                .feather-line {
+                  stroke: hsl(var(--muted-foreground));
+                  stroke-width: 0.7;
+                  opacity: 0.5;
+                }
+              `}
+            </style>
+            {/* Main flourish */}
+            <path
+              d="M50 70 C150 30, 200 90, 300 60 S380 10, 480 50 S550 100, 650 60"
+              className="ink-stroke"
+            />
+            {/* Final stroke ending on the right, leading to the quill */}
+            <path
+              d="M650 60 C700 40, 730 70, 760 65" // End point (760, 65)
+              className="ink-stroke"
+              style={{ strokeWidth: 2.5, opacity: 0.85 }} 
+            />
+
+            {/* Quill Pen at (760, 65), rotated to match stroke direction */}
+            <g transform="translate(758, 64) rotate(-20)"> {/* Adjusted rotation and position slightly */}
+              {/* Nib */}
+              <polygon points="0,0 6,-1.5 6,1.5" className="quill-nib" /> {/* Slightly larger nib */}
+              {/* Body */}
+              <path d="M4,-2 L30,-7 L31,7 L4,2 Z" className="quill-body" /> {/* Adjusted body shape for a more 'pen' like feel */}
+              {/* Simplified feather lines */}
+              <line x1="12" y1="-5" x2="25" y2="-6" className="feather-line" />
+              <line x1="14" y1="-1" x2="27" y2="-1" className="feather-line" />
+              <line x1="12" y1="5" x2="25" y2="6" className="feather-line" />
+            </g>
+          </svg>
+        </div>
+
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 w-full max-w-7xl"> {/* Ensured articles take available width */}
           {articles.map((article) => (
             <ArticleCard key={article.slug} article={article} />
           ))}
@@ -115,3 +175,4 @@ export default function HomePage() {
     </div>
   );
 }
+
