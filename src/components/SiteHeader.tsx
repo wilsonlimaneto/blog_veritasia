@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Globe } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+// Removed Button import as it's no longer used
 
 export default function SiteHeader() {
   return (
@@ -20,12 +20,15 @@ export default function SiteHeader() {
               Fale Conosco
             </Link>
           </nav>
-          <Button variant="outline" size="sm" asChild className="ml-auto">
-            <Link href="https://ia.maestrialaw.com.br" target="_blank" rel="noopener noreferrer">
-              <Globe />
-              Site
-            </Link>
-          </Button>
+          <Link
+            href="https://ia.maestrialaw.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-foreground hover:text-primary transition-colors ml-auto text-sm font-medium"
+          >
+            <Globe className="mr-2 h-4 w-4" />
+            Site
+          </Link>
         </div>
       </div>
     </header>
