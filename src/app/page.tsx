@@ -41,7 +41,7 @@ export default function HomePage() {
               </AccordionTrigger>
               <AccordionContent className="px-6 py-4 text-gray-300">
                 {/* Author 1 */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8"> {/* Added mb-8 for spacing */}
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shadow-lg flex-shrink-0">
                     <Image
                       src="https://placehold.co/100x100.png"
@@ -84,17 +84,26 @@ export default function HomePage() {
           </Accordion>
         </div>
 
-        <div className="flex items-start gap-4 mb-8 px-4 sm:px-6 lg:px-8">
-          <AlertTriangle className="h-16 w-16 text-yellow-500 flex-shrink-0" />
-          <div className="flex-grow rounded-md border-2 border-black bg-[#666666] p-4">
-            <p style={{ color: 'white' }}>AVISO IMPORTANTE - Este conteúdo é desenvolvido e mantido por profissionais com 2 diplomas (Direito + Engenharia de Computação).</p>
-
-            <center><p style={{ color: 'white' }}> - </p></center>
-            <p style={{ color: 'white' }}>Se preferir acreditar em sensacionalismo de rede social (Tenha um Exército de Advogados trabalhando por vocês 24h/dia), em hype ou em produtos montados apenas em cima do ChatGPT, sugerimos não perder tempo lendo as verdades abaixo!</p>
-            <center><p style={{ color: 'white' }}> - </p></center>
-
-            <p style={{ color: 'white' }}>O nosso principal objetivo é evitar que as mentiras contadas cansem o mercado e prejudiquem as Legaltechs que, de fato, agregam valor ao dia a dia da advocacia brasileira!</p>
-          </div>
+        <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-8">
+          <Accordion type="single" collapsible className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600">
+            <AccordionItem value="aviso-importante" className="border-b-0">
+              <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-yellow-400 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
+                AVISO IMPORTANTE
+              </AccordionTrigger>
+              <AccordionContent className="px-6 py-4 text-gray-300">
+                <div className="flex items-start gap-4">
+                  <AlertTriangle className="h-16 w-16 text-yellow-500 flex-shrink-0" />
+                  <div className="flex-grow">
+                    <p style={{ color: 'white' }}>Este conteúdo é desenvolvido e mantido por profissionais com 2 diplomas (Direito + Engenharia de Computação).</p>
+                    <center><p style={{ color: 'white' }}> - </p></center>
+                    <p style={{ color: 'white' }}>Se preferir acreditar em sensacionalismo de rede social (Tenha um Exército de Advogados trabalhando por vocês 24h/dia), em hype ou em produtos montados apenas em cima do ChatGPT, sugerimos não perder tempo lendo as verdades abaixo!</p>
+                    <center><p style={{ color: 'white' }}> - </p></center>
+                    <p style={{ color: 'white' }}>O nosso principal objetivo é evitar que as mentiras contadas cansem o mercado e prejudiquem as Legaltechs que, de fato, agregam valor ao dia a dia da advocacia brasileira!</p>
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8">
