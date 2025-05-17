@@ -48,7 +48,7 @@ export default function HomePage() {
   const viewBoxWidth = current_x + 10 - spacing; // Remove last spacing and add right margin
 
   return (
-    <div className="space-y-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900 flex-grow">
+    <div className="space-y-12 flex-grow"> {/* Removed specific background class here */}
       <section aria-labelledby="page-introduction" className="flex flex-col items-center sm:px-6 lg:px-8 pt-8">
         <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-32 h-auto" />
         <h1 id="page-title" className="text-4xl sm:text-5xl font-bold text-center text-primary">
