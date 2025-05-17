@@ -6,11 +6,10 @@ import Image from 'next/image';
 import { format } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { CalendarDays, UserCircle } from 'lucide-react';
+import { CalendarDays, UserCircle, ArrowLeft, Share2 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
 
 type ArticlePageProps = {
   params: {
@@ -66,6 +65,12 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             <div className="flex items-center">
               <UserCircle className="mr-2 h-4 w-4" />
               <span>By Digital Pages Team</span> {/* Placeholder author */}
+            </div>
+            <div className="flex items-center">
+              <Link href="#" aria-label="Share this article" className="text-primary hover:text-primary/80 transition-colors flex items-center">
+                <Share2 className="mr-1 h-4 w-4" />
+                <span>Share</span>
+              </Link>
             </div>
           </div>
           {article.image && (
