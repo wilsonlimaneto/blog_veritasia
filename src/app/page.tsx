@@ -155,7 +155,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-semibold text-gray-200 mb-6 text-center">
             Artigos mais recentes
           </h2>
-          <ScrollArea className="h-[70vh] w-full rounded-lg border border-gray-600 p-4 bg-gray-700/50 shadow-md">
+          <ScrollArea className="h-[1536px] w-full rounded-lg border border-gray-600 p-4 bg-gray-700/50 shadow-md">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {articles.map((article) => (
                 <ArticleCard key={article.slug} article={article} />
