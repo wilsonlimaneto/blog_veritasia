@@ -34,7 +34,7 @@ export default function HomePage() {
         </h2>
 
         <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-8">
-          <Accordion type="multiple" collapsible className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["item-1"]}>
+          <Accordion type="multiple" className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["item-1"]}>
             <AccordionItem value="item-1" className="border-b-0">
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-gray-200 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
                 Minibio (Currículo dos Responsáveis pelo conteúdo)
@@ -85,7 +85,7 @@ export default function HomePage() {
         </div>
 
         <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-8">
-          <Accordion type="multiple" collapsible className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["aviso-importante"]}>
+          <Accordion type="multiple" className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["aviso-importante"]}>
             <AccordionItem value="aviso-importante" className="border-b-0">
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-yellow-400 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
                 AVISO IMPORTANTE
