@@ -46,8 +46,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
   }
 
   return (
-    <div className="dark bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900 flex-grow py-12 px-4 sm:px-6 lg:px-8">
-      <article className="max-w-3xl mx-auto">
+    <div className="flex-grow py-12 px-4 sm:px-6 lg:px-8">
+      <article className="max-w-3xl mx-auto bg-card text-card-foreground p-6 sm:p-8 rounded-lg shadow-xl">
         <header className="mb-8">
           <Button variant="ghost" size="sm" asChild className="mb-6 text-primary hover:text-primary/80">
             <Link href="/">
