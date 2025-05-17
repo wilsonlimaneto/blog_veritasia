@@ -23,10 +23,10 @@ export default function SiteHeader() {
             href="https://ia.maestrialaw.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-white hover:text-primary/80 transition-colors ml-auto text-sm font-medium"
+            className="flex items-center text-white hover:text-primary/80 transition-colors ml-auto text-sm"
           >
             <Globe className="mr-2 h-4 w-4" />
-            Site
+            <span className="font-bold">Site</span>
           </Link>
         </div>
       </div>
