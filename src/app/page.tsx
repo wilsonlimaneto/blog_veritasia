@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function HomePage() {
   const articles = getAllArticles();
@@ -40,7 +41,6 @@ export default function HomePage() {
       current_x += width_0 + spacing;
     } else if (char === '1') {
       const dx = current_x + width_1 / 2;
-      // Adjusted to make '1's full height
       path_d += `M${dx},${y_val - radius_y} L${dx},${y_val + radius_y} `;
       current_x += width_1 + spacing;
     }
@@ -155,11 +155,13 @@ export default function HomePage() {
           <h2 className="text-3xl font-semibold text-gray-200 mb-6 text-center">
             Artigos mais recentes
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
+          <ScrollArea className="h-[70vh] w-full rounded-lg border border-gray-600 p-4 bg-gray-700/50 shadow-md">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {articles.map((article) => (
+                <ArticleCard key={article.slug} article={article} />
+              ))}
+            </div>
+          </ScrollArea>
         </div>
       </section>
     </div>
