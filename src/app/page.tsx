@@ -24,16 +24,16 @@ export default function HomePage() {
 
   return (
     <div className="space-y-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900 flex-grow">
-      <section aria-labelledby="latest-articles" className="flex flex-col items-center px-4 sm:px-6 lg:px-8">
+      <section aria-labelledby="page-introduction" className="flex flex-col items-center sm:px-6 lg:px-8 pt-8"> {/* Added pt-8 for spacing from header */}
         <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-32 h-auto" />
-        <h1 id="latest-articles" className="text-4xl sm:text-5xl font-bold text-center text-primary">
+        <h1 id="page-title" className="text-4xl sm:text-5xl font-bold text-center text-primary">
           Blog VeritasIA
         </h1>
         <h2 className="text-xl sm:text-2xl text-center text-gray-300 mb-8">
           Desmistificando o Hype, revelando as meias-verdades das IAs Jurídicas
         </h2>
 
-        <div className="w-full max-w-4xl mb-8">
+        <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-8">
           <Accordion type="multiple" className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["item-1"]}>
             <AccordionItem value="item-1" className="border-b-0">
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-gray-200 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
@@ -84,7 +84,7 @@ export default function HomePage() {
           </Accordion>
         </div>
 
-        <div className="w-full max-w-4xl mb-8">
+        <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-8">
           <Accordion type="multiple" className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["aviso-importante"]}>
             <AccordionItem value="aviso-importante" className="border-b-0">
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-yellow-400 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
@@ -106,10 +106,15 @@ export default function HomePage() {
           </Accordion>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-7xl mt-8"> {/* Ensured articles take available width and added margin-top */}
-          {articles.map((article) => (
-            <ArticleCard key={article.slug} article={article} />
-          ))}
+        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-8 mb-8">
+          <h2 className="text-3xl font-semibold text-gray-200 mb-6 text-center">
+            Artigos mais recentes
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {articles.map((article) => (
+              <ArticleCard key={article.slug} article={article} />
+            ))}
+          </div>
         </div>
       </section>
     </div>
