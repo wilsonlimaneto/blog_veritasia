@@ -22,9 +22,33 @@ export default function HomePage() {
     );
   }
 
+  const binarySequence = "011000011111000011110100011101000101";
+  let path_d = "";
+  let current_x = 10;
+  const y_val = 25; // Center Y for characters
+  const char_h = 20; // Height of characters
+  const radius_y = char_h / 2;
+  const width_0 = 15; // Width of '0'
+  const radius_x_0 = width_0 / 2;
+  const width_1 = 4; // Width of '1'
+  const spacing = 7; // Spacing between characters
+
+  for (const char of binarySequence) {
+    if (char === '0') {
+      const cx = current_x + radius_x_0;
+      path_d += `M${cx},${y_val - radius_y} A${radius_x_0},${radius_y} 0 1,0 ${cx - 0.01},${y_val - radius_y} Z `;
+      current_x += width_0 + spacing;
+    } else if (char === '1') {
+      const dx = current_x + width_1 / 2;
+      path_d += `M${dx},${y_val - radius_y + 2} L${dx},${y_val + radius_y - 2} `;
+      current_x += width_1 + spacing;
+    }
+  }
+  const viewBoxWidth = current_x + 10 - spacing; // Remove last spacing and add right margin
+
   return (
     <div className="space-y-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900 flex-grow">
-      <section aria-labelledby="page-introduction" className="flex flex-col items-center sm:px-6 lg:px-8 pt-8"> {/* Added pt-8 for spacing from header */}
+      <section aria-labelledby="page-introduction" className="flex flex-col items-center sm:px-6 lg:px-8 pt-8">
         <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-32 h-auto" />
         <h1 id="page-title" className="text-4xl sm:text-5xl font-bold text-center text-primary">
           Blog VeritasIA
@@ -104,6 +128,27 @@ export default function HomePage() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+        </div>
+
+        <div className="w-full flex justify-center my-6 px-4">
+          <svg 
+            width="100%" 
+            height="30" 
+            viewBox={`0 0 ${viewBoxWidth} 50`} 
+            xmlns="http://www.w3.org/2000/svg" 
+            aria-hidden="true"
+            className="max-w-lg text-gray-400" // Adjusted color for visibility on dark bg
+          >
+            <path 
+              d={path_d.trim()} 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              transform="skewX(-2)" // Slight skew for a "hand-written" feel
+            />
+          </svg>
         </div>
 
         <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-8 mb-8">
