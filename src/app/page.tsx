@@ -43,11 +43,11 @@ export default function HomePage() {
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shadow-lg flex-shrink-0">
                     <Image
                       src="https://placehold.co/100x100.png"
-                      alt="Foto do Autor"
+                      alt="Foto dos Autores"
                       layout="fill"
                       objectFit="cover"
                       className="rounded-full"
-                      data-ai-hint="profile person"
+                      data-ai-hint="profile team"
                     />
                   </div>
                   <div className="text-center sm:text-left">
