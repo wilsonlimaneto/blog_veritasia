@@ -25,7 +25,7 @@ export default function HomePage() {
           Desmistificando o Hype, revelando as meias-verdades das IAs Jurídicas
         </h2>
         <div className="flex items-start gap-4 mb-8 px-4 sm:px-6 lg:px-8"> {/* Added padding here to constrain this specific div */}
-          <AlertTriangle className="h-24 w-24 text-yellow-500 flex-shrink-0" />
+          <AlertTriangle className="h-16 w-16 text-yellow-500 flex-shrink-0" />
           <div className="flex-grow rounded-md border-2 border-black bg-[#666666] p-4">
             <p style={{ color: 'white' }}>AVISO IMPORTANTE - Este conteúdo é desenvolvido e mantido por profissionais com 2 diplomas (Direito + Engenharia de Computação).</p>
 
