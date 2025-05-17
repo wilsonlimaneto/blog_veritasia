@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Linkedin, Instagram, MessageCircle } from 'lucide-react';
+import { Youtube, InstagramIcon, Linkedin } from 'lucide-react';
 
 export default function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -8,57 +8,25 @@ export default function SiteFooter() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="md:flex md:justify-between md:items-center">
           <div className="text-center md:text-left mb-6 md:mb-0">
-            <Link href="/" className="text-2xl font-bold text-white hover:text-gray-300 transition-colors">
-              Digital Pages
-            </Link>
+ <img src="/oie_pnD9PzjNbeOy.png" alt="SiteGeadres logo" className="h-7" />
+            <p className="mt-2 text-sm">Faça buscas Inteligentes, sem esforço. Ganhe mais causas.</p>
             <p className="mt-2 text-sm">
-              &copy; {currentYear} Digital Pages. Todos os direitos reservados.
+              &copy; {currentYear} Maestria Law. Todos os direitos reservados.
             </p>
           </div>
           <div className="text-center md:text-right">
-            <p className="text-sm mb-4">
-              Desenvolvido por{' '}
-              <a
-                href="#" // Replace with actual developer link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-gray-300 transition-colors"
-              >
-                Seu Nome/Empresa Aqui
-              </a>
-            </p>
-            <div className="flex justify-center md:justify-end space-x-4">
-              <a
-                href="#" // Replace with actual WhatsApp link
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <MessageCircle className="h-6 w-6" />
-              </a>
-              <a
-                href="#" // Replace with actual Instagram link
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a
-                href="#" // Replace with actual LinkedIn link
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
+            <h3 className="text-lg font-semibold text-white">Siga nossas redes!</h3>
+            <div className="flex space-x-4 mt-4"> {/* This div already controls spacing */}
+              <Link href="https://www.youtube.com/@Maestrialaw" aria-label="YouTube" className="text-muted-foreground hover:text-primary transition-colors">
+                <Youtube className="h-6 w-6" />
+              </Link>
+              <Link href="https://www.instagram.com/maestrialaw/" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
+                  <InstagramIcon className="h-6 w-6" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/maestrialaw/" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
-              </a>
+              </Link>
             </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+          </div> {/* Closing div for flex space-x-4 mt-4 */}
+      </div></div>
+    </footer>)}
