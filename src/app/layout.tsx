@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-gradient-to-r from-[#0081FF] to-[#0066CC]`}>
         <SiteHeader />
-        <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8">
+        <main className="flex-grow">
           {children}
         </main>
         <SiteFooter />

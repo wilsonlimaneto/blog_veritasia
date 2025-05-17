@@ -15,8 +15,8 @@ export default function HomePage() {
   }
 
   return (
-    <div className="space-y-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900 py-8">
-      <section aria-labelledby="latest-articles" className="flex flex-col items-center px-4">
+    <div className="space-y-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900 py-8 flex-grow">
+      <section aria-labelledby="latest-articles" className="flex flex-col items-center">
         <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-32 h-auto" />
         <h1 id="latest-articles" className="text-4xl sm:text-5xl font-bold text-center text-primary">
           Blog VeritasIA
@@ -24,7 +24,7 @@ export default function HomePage() {
         <h2 className="text-xl sm:text-2xl text-center text-gray-300 mb-8">
           Desmistificando o Hype, revelando as meias-verdades das IAs Jurídicas
         </h2>
-        <div className="flex items-start gap-4 mb-8">
+        <div className="flex items-start gap-4 mb-8 px-4 sm:px-6 lg:px-8"> {/* Added padding here to constrain this specific div */}
           <AlertTriangle className="h-24 w-24 text-yellow-500 flex-shrink-0" />
           <div className="flex-grow rounded-md border-2 border-black bg-[#666666] p-4">
             <p style={{ color: 'white' }}>AVISO IMPORTANTE - Este conteúdo é desenvolvido e mantido por profissionais com 2 diplomas (Direito + Engenharia de Computação).</p>
@@ -37,7 +37,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8"> {/* Added padding here to constrain the grid */}
           {articles.map((article) => (
             <ArticleCard key={article.slug} article={article} />
           ))}
