@@ -15,13 +15,13 @@ export default function HomePage() {
   }
 
   return (
-    <div className="space-y-12 bg-[#CCCCCC]">
+    <div className="space-y-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900 py-8">
       <section aria-labelledby="latest-articles" className="flex flex-col items-center px-4">
         <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-32 h-auto" />
         <h1 id="latest-articles" className="text-4xl sm:text-5xl font-bold text-center text-primary">
           Blog VeritasIA
         </h1>
-        <h2 className="text-xl sm:text-2xl text-center text-muted-foreground mb-8">
+        <h2 className="text-xl sm:text-2xl text-center text-gray-300 mb-8">
           Desmistificando o Hype, revelando as meias-verdades das IAs Jurídicas
         </h2>
         <div className="flex items-start gap-4 mb-8">
@@ -46,4 +46,3 @@ export default function HomePage() {
     </div>
   );
 }
-

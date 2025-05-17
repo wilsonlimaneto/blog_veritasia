@@ -36,6 +36,6 @@ export function getAllArticles(): Article[] {
     .map((slug) => getArticleBySlug(slug))
     .filter((article): article is Article => article !== null)
     // Sort articles by date in descending order
-    .sort((article1, article2) => (new Date(article1.date) > new Date(article2.date) ? -1 : 1));
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   return articles;
 }
