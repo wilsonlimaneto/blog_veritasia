@@ -24,7 +24,7 @@ export default function HomePage() {
 
   return (
     <div className="space-y-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900 flex-grow">
-      <section aria-labelledby="latest-articles" className="flex flex-col items-center">
+      <section aria-labelledby="latest-articles" className="flex flex-col items-center px-4 sm:px-6 lg:px-8">
         <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-32 h-auto" />
         <h1 id="latest-articles" className="text-4xl sm:text-5xl font-bold text-center text-primary">
           Blog VeritasIA
@@ -33,7 +33,7 @@ export default function HomePage() {
           Desmistificando o Hype, revelando as meias-verdades das IAs Jurídicas
         </h2>
 
-        <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-8">
+        <div className="w-full max-w-4xl mb-8">
           <Accordion type="multiple" className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["item-1"]}>
             <AccordionItem value="item-1" className="border-b-0">
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-gray-200 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
@@ -84,7 +84,7 @@ export default function HomePage() {
           </Accordion>
         </div>
 
-        <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-8">
+        <div className="w-full max-w-4xl mb-8">
           <Accordion type="multiple" className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["aviso-importante"]}>
             <AccordionItem value="aviso-importante" className="border-b-0">
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-yellow-400 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
@@ -106,99 +106,7 @@ export default function HomePage() {
           </Accordion>
         </div>
 
-        {/* Decorative SVG divider - Binary writing with white quill */}
-        <div className="w-full px-4 sm:px-6 lg:px-8 my-2 md:my-4">
-          <svg
-            className="w-full h-auto max-h-20 md:max-h-28" // Adjusted height
-            viewBox="0 0 800 100"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <style>
-              {`
-                .binary-trace-ink {
-                  stroke: hsl(var(--muted-foreground)); /* Ink color for the 0s and 1s trace */
-                  stroke-width: 2; /* Adjusted stroke width for "ink" */
-                  fill: none;
-                  stroke-linecap: round;
-                  stroke-linejoin: round;
-                  opacity: 0.75;
-                }
-                .quill-feather-body {
-                  fill: white; /* White feather body */
-                  stroke: #bdbdbd; /* Light gray outline for definition */
-                  stroke-width: 0.3;
-                  opacity: 0.95;
-                }
-                .quill-feather-lines {
-                  stroke: #e0e0e0; /* Very light gray for feather details */
-                  stroke-width: 0.5;
-                  opacity: 0.8;
-                }
-                .quill-nib {
-                  fill: hsl(var(--primary)); /* Nib color - can be primary or a gold-like accent */
-                  opacity: 1;
-                }
-              `}
-            </style>
-            {/* Path representing the "writing" of binary digits (0s and 1s) */}
-            {/* This is an artistic representation of a sequence like 01101001... */}
-            <path
-              d="M50 70 
-                 c0-7 12-7 12 0 c0 7 -12 7 -12 0  /* '0' shape */
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10   /* '1' shape */
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10   /* '1' shape */
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0  /* '0' shape, move a bit right */
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10   /* '1' shape */
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0  /* '0' shape */
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0  /* '0' shape */
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10   /* '1' shape */
-                 /* Repeating the pattern to fill space */
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0 
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10  
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10  
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0 
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10  
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0 
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0 
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10  
-                 /* Another set */
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0 
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10  
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10  
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0 
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10  
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0 
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0 
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10
-                 /* Continue towards quill */
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10
-                 l0 -10 l4 0 l0 20 l-4 0 l0 -10
-                 m3 0 c0-7 12-7 12 0 c0 7 -12 7 -12 0
-                 /* Final segment leading to the quill */
-                 c 10 -15, 40 -25, 70 -10 S 730 70, 760 65"
-              className="binary-trace-ink"
-            />
-
-            {/* White Quill Pen at (760, 65), rotated to match stroke direction */}
-            <g transform="translate(758, 64) rotate(-20)"> {/* Adjusted rotation and position slightly */}
-              {/* Nib */}
-              <polygon points="0,0 6,-1.5 6,1.5" className="quill-nib" />
-              {/* Feather Body */}
-              <path d="M4,-2 L30,-7 L31,7 L4,2 Z" className="quill-feather-body" />
-              {/* Feather Details */}
-              <line x1="12" y1="-5" x2="25" y2="-6" className="quill-feather-lines" />
-              <line x1="14" y1="-1" x2="27" y2="-1" className="quill-feather-lines" />
-              <line x1="12" y1="5" x2="25" y2="6" className="quill-feather-lines" />
-            </g>
-          </svg>
-        </div>
-
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 w-full max-w-7xl"> {/* Ensured articles take available width */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-7xl mt-8"> {/* Ensured articles take available width and added margin-top */}
           {articles.map((article) => (
             <ArticleCard key={article.slug} article={article} />
           ))}
