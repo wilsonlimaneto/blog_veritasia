@@ -1,3 +1,4 @@
+
 import ArticleCard from '@/components/ArticleCard';
 import { getAllArticles } from '@/lib/articles';
 import { AlertTriangle } from 'lucide-react';
@@ -39,21 +40,42 @@ export default function HomePage() {
                 Minibio (Currículo dos Responsáveis pelo conteúdo)
               </AccordionTrigger>
               <AccordionContent className="px-6 py-4 text-gray-300">
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                {/* Author 1 */}
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8"> {/* Added mb-8 for spacing */}
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shadow-lg flex-shrink-0">
                     <Image
                       src="https://placehold.co/100x100.png"
-                      alt="Foto dos Autores"
+                      alt="Foto do Dr. Fulano de Tal"
                       layout="fill"
                       objectFit="cover"
                       className="rounded-full"
-                      data-ai-hint="profile team"
+                      data-ai-hint="profile photo"
                     />
                   </div>
                   <div className="text-center sm:text-left">
-                    <h3 className="text-xl font-bold text-gray-100 mb-2">Dr. Fulano de Tal e Eng. Ciclano da Silva</h3>
+                    <h3 className="text-xl font-bold text-gray-100 mb-2">Dr. Fulano de Tal</h3>
                     <p className="text-sm leading-relaxed">
-                      Profissionais com vasta experiência combinada em Direito e Engenharia de Computação, dedicados a analisar e desmistificar as aplicações de Inteligência Artificial no setor jurídico. Nosso objetivo é fornecer informações claras, precisas e baseadas em evidências para advogados, gestores jurídicos e entusiastas da tecnologia.
+                      Profissional com vasta experiência em Direito, dedicado a analisar e desmistificar as aplicações de Inteligência Artificial no setor jurídico. Meu objetivo é fornecer informações claras e precisas para advogados e gestores jurídicos.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Author 2 */}
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shadow-lg flex-shrink-0">
+                    <Image
+                      src="https://placehold.co/100x101.png" /* Different placeholder for distinction */
+                      alt="Foto do Eng. Ciclano da Silva"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-full"
+                      data-ai-hint="profile photo"
+                    />
+                  </div>
+                  <div className="text-center sm:text-left">
+                    <h3 className="text-xl font-bold text-gray-100 mb-2">Eng. Ciclano da Silva</h3>
+                    <p className="text-sm leading-relaxed">
+                      Especialista em Engenharia de Computação com foco em Inteligência Artificial. Dedico-me a explorar e explicar as tecnologias por trás das IAs jurídicas, ajudando a traduzir o complexo para o compreensível.
                     </p>
                   </div>
                 </div>
@@ -62,7 +84,7 @@ export default function HomePage() {
           </Accordion>
         </div>
 
-        <div className="flex items-start gap-4 mb-8 px-4 sm:px-6 lg:px-8"> {/* Added padding here to constrain this specific div */}
+        <div className="flex items-start gap-4 mb-8 px-4 sm:px-6 lg:px-8">
           <AlertTriangle className="h-16 w-16 text-yellow-500 flex-shrink-0" />
           <div className="flex-grow rounded-md border-2 border-black bg-[#666666] p-4">
             <p style={{ color: 'white' }}>AVISO IMPORTANTE - Este conteúdo é desenvolvido e mantido por profissionais com 2 diplomas (Direito + Engenharia de Computação).</p>
@@ -75,7 +97,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8"> {/* Added padding here to constrain the grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8">
           {articles.map((article) => (
             <ArticleCard key={article.slug} article={article} />
           ))}
