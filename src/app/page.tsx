@@ -40,7 +40,8 @@ export default function HomePage() {
       current_x += width_0 + spacing;
     } else if (char === '1') {
       const dx = current_x + width_1 / 2;
-      path_d += `M${dx},${y_val - radius_y + 2} L${dx},${y_val + radius_y - 2} `;
+      // Adjusted to make '1's full height
+      path_d += `M${dx},${y_val - radius_y} L${dx},${y_val + radius_y} `;
       current_x += width_1 + spacing;
     }
   }
@@ -131,20 +132,20 @@ export default function HomePage() {
         </div>
 
         <div className="w-full flex justify-center my-6 px-4">
-          <svg 
-            width="100%" 
-            height="30" 
-            viewBox={`0 0 ${viewBoxWidth} 50`} 
-            xmlns="http://www.w3.org/2000/svg" 
+          <svg
+            width="100%"
+            height="30"
+            viewBox={`0 0 ${viewBoxWidth} 50`}
+            xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             className="max-w-lg text-gray-400" // Adjusted color for visibility on dark bg
           >
-            <path 
-              d={path_d.trim()} 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
+            <path
+              d={path_d.trim()}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
               strokeLinejoin="round"
               transform="skewX(-2)" // Slight skew for a "hand-written" feel
             />
