@@ -45,7 +45,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
   }
 
   return (
-    <article className="max-w-3xl mx-auto py-8 animate-fadeIn">
+    <article className="max-w-3xl mx-auto py-8">
       <header className="mb-8">
         <Button variant="ghost" size="sm" asChild className="mb-6 text-primary hover:text-primary/80">
           <Link href="/">
