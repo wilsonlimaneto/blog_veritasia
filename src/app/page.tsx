@@ -71,8 +71,8 @@ export default function HomePage() {
                     <Image
                       src="https://placehold.co/100x100.png"
                       alt="Foto do Dr. Fulano de Tal"
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{objectFit: "cover"}}
                       className="rounded-full"
                       data-ai-hint="profile photo"
                     />
@@ -91,8 +91,8 @@ export default function HomePage() {
                     <Image
                       src="https://placehold.co/100x101.png" /* Different placeholder for distinction */
                       alt="Foto do Eng. Ciclano da Silva"
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{objectFit: "cover"}}
                       className="rounded-full"
                       data-ai-hint="profile photo"
                     />
@@ -130,7 +130,7 @@ export default function HomePage() {
             </AccordionItem>
           </Accordion>
         </div>
-
+        
         <div className="w-full flex justify-center my-6 px-4">
           <svg
             width="100%"
@@ -138,7 +138,7 @@ export default function HomePage() {
             viewBox={`0 0 ${viewBoxWidth} 50`}
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
-            className="max-w-lg text-gray-400" // Adjusted color for visibility on dark bg
+            className="max-w-lg text-gray-400" 
           >
             <path
               d={path_d.trim()}
@@ -147,7 +147,6 @@ export default function HomePage() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              transform="skewX(-2)" // Slight skew for a "hand-written" feel
             />
           </svg>
         </div>
