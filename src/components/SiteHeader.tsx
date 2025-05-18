@@ -32,7 +32,7 @@ export default function SiteHeader() {
               className="flex items-center text-white hover:text-primary/80 transition-colors text-sm"
             >
               <MessageCircle className="mr-2 h-4 w-4" />
-              <span className="font-bold">Entre no Grupo de Discussão</span>
+              <span className="font-bold">Grupo de Discussão</span>
             </Link>
           </div>
         </div>
