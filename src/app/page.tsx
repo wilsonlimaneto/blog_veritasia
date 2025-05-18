@@ -63,7 +63,7 @@ export default function HomePage() {
           <Accordion type="multiple" className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["item-1"]}>
             <AccordionItem value="item-1" className="border-b-0">
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-gray-200 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
-                Minibio (Currículo dos Responsáveis pelo conteúdo)
+                Conheça os Autores
               </AccordionTrigger>
               <AccordionContent className="px-6 py-4 text-gray-300">
                 {/* Author 1 */}

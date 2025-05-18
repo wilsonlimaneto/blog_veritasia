@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: #E5E5E5; /* #E5E5E5 Light Gray */
-    --foreground: 0 0% 15%; /* Dark text for light background, adjusted for contrast */
+    --background: #FFFFFF; /* #FFFFFF White */
+    --foreground: 0 0% 3.9%; /* Black */
     --card: 0 0% 100%; /* White cards */
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
@@ -50,9 +50,9 @@
 
   }
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --background: 0 0% 3.9%; /* Black */
+    --foreground: 0 0% 98%; /* White */
+    --card: 0 0% 3.9%; /* Black cards, matching background */
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -106,7 +106,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);
   }
 
   /* Basic Markdown Styling */

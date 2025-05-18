@@ -1,9 +1,9 @@
 ---
 title: "Optimizing Next.js Applications for Peak Performance"
 description: "Discover key techniques for optimizing Next.js applications, including code splitting, image optimization, and server-side rendering strategies."
-date: "2025-08-10"
+date: "2025-03-10"
 image: "1200x630.png"
-author: "Wilson Slimant"
+author: "Wilson Neto"
 ---
 
 
