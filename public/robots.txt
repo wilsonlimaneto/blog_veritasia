@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Replace [YOUR_SITE_URL] with your actual production site URL
+# e.g., Sitemap: https://www.veritasia.com.br/sitemap.xml
+# This uses the NEXT_PUBLIC_SITE_URL environment variable if set.
+Sitemap: ${process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml` : 'http://localhost:9002/sitemap.xml'}
