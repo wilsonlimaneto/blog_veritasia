@@ -16,13 +16,23 @@ export function getArticleBySlug(slug: string): Article | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
+    let imageUrl = `https://placehold.co/1200x630.png`; // Default placeholder
+    if (data.image && typeof data.image === 'string' && data.image.trim() !== '') {
+      if (data.image.startsWith('http://') || data.image.startsWith('https://')) {
+        imageUrl = data.image;
+      } else {
+        // Assumes local images are in 'public/images/articles/'
+        imageUrl = `/images/articles/${data.image}`;
+      }
+    }
+
     return {
       slug,
       title: data.title || 'Untitled Article',
       description: data.description || '',
       date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
-      image: data.image || `https://placehold.co/600x400.png`,
-      author: data.author || 'Blog Author', // Added author field here
+      image: imageUrl,
+      author: data.author || 'Blog Author',
       content,
     } as Article;
   } catch (error) {
