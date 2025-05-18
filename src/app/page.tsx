@@ -26,11 +26,11 @@ export default function HomePage() {
   const binarySequence = "011000011111000011110100011101000101";
   let path_d = "";
   let current_x = 10;
-  const y_val = 25; // Center Y for characters
+  const y_val = 30; // Center Y for characters - Adjusted from 25
   const char_h = 20; // Height of characters
   const radius_y = char_h / 2;
-  const width_0 = 16; // Width of '0', changed from 15 to 16
-  const radius_x_0 = width_0 / 2; // X radius for '0', now 8
+  const width_0 = 16; // Width of '0'
+  const radius_x_0 = width_0 / 2; // X radius for '0'
   const width_1 = 4; // Width of '1'
   const spacing = 7; // Spacing between characters
 
@@ -48,7 +48,7 @@ export default function HomePage() {
   const viewBoxWidth = current_x + 10 - spacing; // Remove last spacing and add right margin
 
   return (
-    <div className="space-y-12 flex-grow"> {/* Removed specific background class here */}
+    <div className="space-y-12 flex-grow">
       <section aria-labelledby="page-introduction" className="flex flex-col items-center sm:px-6 lg:px-8 pt-8 mb-12">
         <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-40 h-auto" />
         <h1 id="page-title" className="text-4xl sm:text-5xl font-bold text-center text-primary">
@@ -141,8 +141,8 @@ export default function HomePage() {
         <div className="w-full flex justify-center my-12 px-4">
           <svg
             width="100%"
-            height="30"
-            viewBox={`0 0 ${viewBoxWidth} 40`}
+            height="50" // Adjusted from 30
+            viewBox={`0 0 ${viewBoxWidth} 50`} // Adjusted viewBox height from 40
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             className="max-w-lg text-gray-400"
