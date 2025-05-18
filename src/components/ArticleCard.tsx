@@ -35,7 +35,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         <CardHeader className="p-0">
           <div className="relative w-full h-56 sm:h-64">
             <Image
-              src={article.image || "https://placehold.co/600x400.png"}
+              src={article.image}
               alt={article.title}
               fill
               style={{objectFit: "cover"}}

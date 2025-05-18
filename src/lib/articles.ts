@@ -16,14 +16,20 @@ export function getArticleBySlug(slug: string): Article | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
-    let imageUrl = `https://placehold.co/1200x630.png`; // Default placeholder
-    if (data.image && typeof data.image === 'string' && data.image.trim() !== '') {
-      if (data.image.startsWith('http://') || data.image.startsWith('https://')) {
-        imageUrl = data.image;
+    let imageUrl: string;
+    const rawImage = data.image;
+
+    if (rawImage && typeof rawImage === 'string' && rawImage.trim() !== '') {
+      if (rawImage.startsWith('http://') || rawImage.startsWith('https://')) {
+        imageUrl = rawImage; // Use external URL directly
       } else {
-        // Assumes local images are in 'public/images/articles/'
-        imageUrl = `/images/articles/${data.image}`;
+        // Assumes local image filename, prepend path
+        // Ensure no leading slash from rawImage if it's just a filename
+        const imageName = rawImage.startsWith('/') ? rawImage.substring(1) : rawImage;
+        imageUrl = `/images/articles/${imageName}`; 
       }
+    } else {
+      imageUrl = 'https://placehold.co/1200x630.png'; // Default placeholder
     }
 
     return {

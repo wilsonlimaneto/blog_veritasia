@@ -2,7 +2,7 @@
 title: "A verdade (e aspectos técnicos) sobre a Busca de Jurisprudência por IA"
 description: "Primeiro o ChatGPT inventa, depois surgem funcionalidades de Busca e Investigação (Deep Search e/ou Pesquisa Profunda). Como funciona e até onde estas pesquisas podem ajudar você advogado."
 date: "2025-05-17"
-image: "content-strategy-banner.png"
+image: "search-engine.png"
 author: "Wilson Lima"
 ---
 
@@ -21,3 +21,4 @@ Diariamente, milhares de julgados são publicados. O Direito, principalmente num
 7.  **Measure & Iterate:** Track key metrics (traffic, engagement, conversions) and refine your strategy.
 
 > A well-defined content strategy transforms your blog from a hobby into a powerful communication tool.
+
