@@ -1,6 +1,6 @@
 ---
-title: "Mastering Tailwind CSS for Modern UIs"
-description: "Learn effective strategies and best practices for leveraging Tailwind CSS to build beautiful, responsive, and maintainable user interfaces."
+title: "[Mastering Tailwind CSS for Modern UIs](/articles/styling-with-tailwind)"
+description: "Learn effective strategies and best practices for leveraging Tailwind CSS to build beautiful, responsive, and maintainable user interfaces. The link will point to the article itself."
 date: "2024-06-28"
 image: "https://placehold.co/1200x630.png"
 ---

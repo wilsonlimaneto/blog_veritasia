@@ -4,7 +4,7 @@ description: "A guide to creating inclusive web experiences by implementing acce
 date: "2025-08-15"
 image: "https://placehold.co/1200x630.png"
 ---
-
+<style> a:hover { text-decoration: underline; } </style>
 ## Why Accessibility (a11y)?
 
 Web accessibility ensures that people with disabilities can use the web. It's crucial for inclusivity and often a legal requirement.
@@ -35,4 +35,4 @@ Web accessibility ensures that people with disabilities can use the web. It's cr
 </button>
 \`\`\`
 
-> Prioritizing accessibility benefits all users and creates a more inclusive web.
+- Prioritizing accessibility benefits all users and creates a more inclusive web.

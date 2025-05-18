@@ -1,5 +1,5 @@
 ---
-title: "Mastering WILSON Tailwind CSS for Modern UIs"
+title: "[Mastering WILSON Tailwind CSS for Modern UIs](/articles/tailwind-theming-strategies)"
 description: "Learn effective strategies and best practices for leveraging Tailwind CSS to build beautiful, responsive, and maintainable user interfaces."
 date: "2025-06-28"
 image: "https://placehold.co/1200x630.png"

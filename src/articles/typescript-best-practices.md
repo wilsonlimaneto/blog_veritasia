@@ -1,6 +1,6 @@
 ---
-title: "TypeScript Best Practices for Robust Codebases"
-description: "Adopt these TypeScript best practices to enhance code quality, maintainability, and developer productivity in your projects."
+title: "TypeScript Best Practices for Robust Codebases(/articles/typescript-best-practices)"
+description: "Adopt these [TypeScript Best Practices for Robust Codebases](/articles/typescript-best-practices) to enhance code quality, maintainability, and developer productivity in your projects."
 date: "2025-09-05"
 image: "https://placehold.co/1200x630.png"
 ---

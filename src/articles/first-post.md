@@ -1,9 +1,11 @@
 ---
-title: "Exploring Next.js 15 Features"
+title: "[Exploring Next.js 15 Features](/articles/exploring-nextjs-15-features)"
 description: "A deep dive into the latest advancements and features introduced in Next.js 15, enhancing developer experience and application performance."
 date: "2024-07-15"
 image: "https://placehold.co/1200x630.png"
 ---
+
+<style> a { text-decoration: none; } a:hover { text-decoration: underline; } </style>
 
 ## Introduction to Next.js 15
 

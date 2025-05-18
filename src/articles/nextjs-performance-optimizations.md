@@ -4,7 +4,7 @@ description: "Discover key techniques for optimizing Next.js applications, inclu
 date: "2025-08-10"
 image: "https://placehold.co/1200x630.png"
 ---
-
+## [Optimizing Next.js Applications for Peak Performance](/articles/nextjs-performance-optimizations)
 ## Performance in Next.js
 
 Next.js offers many built-in optimizations, but understanding how to leverage them is key.

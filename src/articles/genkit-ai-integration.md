@@ -1,8 +1,8 @@
 ---
-title: "Integrating Genkit for AI-Powered Features"
+title: "[Integrating Genkit for AI-Powered Features](/articles/genkit-ai-integration)"
 description: "A practical guide to integrating Genkit into your Next.js application to leverage powerful AI models for various tasks."
 date: "2025-07-25"
-image: "https://placehold.co/1200x630.png"
+image: "https://placehold.co/1200x630.png?text=Genkit+Integration"
 ---
 
 ## Introduction to Genkit

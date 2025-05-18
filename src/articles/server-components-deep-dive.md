@@ -1,6 +1,6 @@
 ---
-title: "Next.js Server Components: A Deep Dive"
-description: "Understand the architecture, benefits, and use cases of React Server Components in Next.js for improved performance."
+title: "[Next.js Server Components: A Deep Dive](/articles/server-components-deep-dive)"
+description: "Understand the architecture, benefits, and use cases of React Server Components in Next.js for improved performance. [[clue]]"
 date: "2025-08-01"
 image: "https://placehold.co/1200x630.png"
 ---

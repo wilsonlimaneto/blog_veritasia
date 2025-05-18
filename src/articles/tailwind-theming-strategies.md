@@ -1,5 +1,5 @@
 ---
-title: "Effective Theming Strategies with Tailwind CSS"
+title: "[Effective Theming Strategies with Tailwind CSS](/articles/tailwind-theming-strategies)"
 description: "Learn how to implement robust and flexible theming in your Tailwind CSS projects using CSS variables and plugins."
 date: "2025-08-05"
 image: "https://placehold.co/1200x630.png"

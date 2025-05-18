@@ -1,5 +1,5 @@
 ---
-title: "Exploring Data Visualization with React Charts"
+title: "[Exploring Data Visualization with React Charts](/articles/exploring-data-visualization)"
 description: "Learn how to create interactive and informative charts in your React applications using popular libraries."
 date: "2025-09-01"
 image: "https://placehold.co/1200x630.png"

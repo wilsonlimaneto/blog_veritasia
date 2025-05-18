@@ -1,6 +1,6 @@
 ---
-title: "Advanced React Patterns for Scalable Applications"
-description: "Explore advanced React patterns like HOCs, Render Props, and Hooks to build more maintainable and scalable applications."
+title: "[Advanced React Patterns for Scalable Applications](./advanced-react-patterns)"
+description: "Explore advanced React patterns like HOCs, Render Props, and Hooks to build more maintainable and scalable applications. Add a visual clue on mouse over."
 date: "2025-07-20"
 image: "https://placehold.co/1200x630.png"
 ---
