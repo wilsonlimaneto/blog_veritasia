@@ -70,7 +70,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shadow-lg flex-shrink-0">
                     <Image
-                      src="https://placehold.co/100x100.png"
+                      src="/images/wilson.png"
                       alt="Foto do Dr. Fulano de Tal"
                       fill
                       style={{objectFit: "cover"}}
@@ -91,7 +91,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shadow-lg flex-shrink-0">
                     <Image
-                      src="https://placehold.co/100x101.png" /* Different placeholder for distinction */
+                      src="/images/cristian.png" 
                       alt="Foto do Eng. Ciclano da Silva"
                       fill
                       style={{objectFit: "cover"}}
