@@ -43,8 +43,8 @@ export default function ArticleCard({ article }: ArticleCardProps) {
 
         </div>
 
-        <Link href={`/articles/${article.slug}`} className="inline-flex items-center text-primary hover:underline text-sm font-medium">
-          Read More
+        <Link href={`/articles/${article.slug}`} className="inline-flex items-center text-primary hover:underline text-sm font-bold">
+          Leia
           <ArrowRight className="ml-2 h-4 w-4" />
         </Link>
       </CardFooter>
