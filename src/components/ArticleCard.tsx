@@ -1,3 +1,4 @@
+
 import type { Article } from '@/types';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -28,10 +29,10 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         </Link>
       </CardHeader>
       <CardContent className="p-6 flex-grow">
-        <CardTitle className="text-lg lg:text-xl mb-3 leading-tight line-clamp-2">
+        <CardTitle className="text-lg lg:text-xl mb-3 leading-tight line-clamp-3">
             {article.title}
         </CardTitle>
-        <CardDescription className="text-muted-foreground text-sm mb-4 line-clamp-3">
+        <CardDescription className="text-muted-foreground text-sm mb-4 line-clamp-2">
           {article.description}
         </CardDescription>
       </CardContent>
