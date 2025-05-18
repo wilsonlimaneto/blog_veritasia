@@ -73,7 +73,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
               </div>
               <div className="flex items-center">
                 <UserCircle className="mr-2 h-4 w-4" />
-                <span>Por Wilson Neto</span> {/* Placeholder author */}
+                <span>Por {article.author}</span> 
               </div>
               <div className="flex items-center">
                 <button 

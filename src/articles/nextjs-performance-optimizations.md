@@ -3,9 +3,9 @@ title: "Optimizing Next.js Applications for Peak Performance"
 description: "Discover key techniques for optimizing Next.js applications, including code splitting, image optimization, and server-side rendering strategies."
 date: "2025-08-10"
 image: "https://placehold.co/1200x630.png"
+author: "Wilson Slimant"
 ---
-## [Optimizing Next.js Applications for Peak Performance](/articles/nextjs-performance-optimizations)
-## Performance in Next.js
+
 
 Next.js offers many built-in optimizations, but understanding how to leverage them is key.
 

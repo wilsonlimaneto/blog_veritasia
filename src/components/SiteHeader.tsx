@@ -16,17 +16,7 @@ export default function SiteHeader() {
         </Link>
         
         <div className="flex items-center gap-4"> {/* Reduced gap for potentially more items */}
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link href="#" className="text-foreground hover:text-primary transition-colors">
-              Sobre Nós
-            </Link>
-            <Link href="#" className="text-foreground hover:text-primary transition-colors">
-              Consultar Processo
-            </Link>
-            <Link href="#" className="text-foreground hover:text-primary transition-colors">
-              Fale Conosco
-            </Link>
-          </nav>
+
           <div className="flex items-center gap-4"> {/* Group for Site and WhatsApp links */}
             <Link
               href="https://ia.maestrialaw.com.br"

@@ -3,6 +3,7 @@ title: "A verdade (e aspectos técnicos) sobre a Busca de Jurisprudência por IA
 description: "Primeiro o ChatGPT inventa, depois surgem funcionalidades de Busca e Investigação (Deep Search e/ou Pesquisa Profunda). Como funciona e até onde estas pesquisas podem ajudar você advogado."
 date: "2025-05-17"
 image: "https://placehold.co/1200x630.png"
+author: "Wilson Lima"
 ---
 
 ### Em resumo, se você precisa encontrar julgados com um maior grau de confiança, desista do ChatGPT, Gemini, Grok e de qualquer outra IA Genérica.

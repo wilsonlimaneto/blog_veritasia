@@ -5,4 +5,5 @@ export type Article = {
   date: string; // ISO date string
   image: string; // URL or path to image
   content: string; // Markdown content
+  author: string;
 };
