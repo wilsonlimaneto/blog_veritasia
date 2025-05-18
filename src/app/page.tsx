@@ -159,39 +159,6 @@ export default function HomePage() {
           </svg>
         </div>
 
-        {/* Gavel SVG - New */}
-        <div className="w-full flex justify-center my-8 px-4">
-          <svg
-            width="100" 
-            height="100"
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            className="text-gray-400" 
-          >
-            {/* Gavel Head */}
-            <rect x="10" y="20" width="80" height="30" rx="5" ry="5" fill="currentColor" />
-            {/* Gavel Handle */}
-            <rect x="42" y="48" width="16" height="45" rx="3" ry="3" fill="currentColor" />
-
-            {/* Decorative 0s and 1s on Gavel Head */}
-            {/* '0' - circle */}
-            <circle cx="25" cy="35" r="3" fill="hsl(var(--background))" /> 
-            <circle cx="50" cy="35" r="3" fill="hsl(var(--background))" />
-            <circle cx="75" cy="35" r="3" fill="hsl(var(--background))" />
-            
-            {/* '1' - line */}
-            <line x1="35" y1="30" x2="35" y2="40" stroke="hsl(var(--background))" strokeWidth="2" strokeLinecap="round" />
-            <line x1="60" y1="30" x2="60" y2="40" stroke="hsl(var(--background))" strokeWidth="2" strokeLinecap="round" />
-
-            {/* Decorative 0s and 1s on Gavel Handle */}
-             <circle cx="50" cy="60" r="2.5" fill="hsl(var(--background))" />
-             <line x1="50" y1="70" x2="50" y2="78" stroke="hsl(var(--background))" strokeWidth="1.5" strokeLinecap="round" />
-             <circle cx="50" cy="85" r="2.5" fill="hsl(var(--background))" />
-          </svg>
-        </div>
-
-
         <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-8 mb-12">
           <h2 className="text-3xl font-semibold text-gray-200 mb-6 text-center">
             Artigos mais recentes
@@ -208,5 +175,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    
