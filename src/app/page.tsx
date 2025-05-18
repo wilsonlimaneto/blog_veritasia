@@ -26,10 +26,10 @@ export default function HomePage() {
   const binarySequence = "011000011111000011110100011101000101";
   let path_d = "";
   let current_x = 10;
-  const y_val = 30; // Center Y for characters - Adjusted from 25
+  const y_val = 30; // Center Y for characters
   const char_h = 20; // Height of characters
   const radius_y = char_h / 2;
-  const width_0 = 16; // Width of '0'
+  const width_0 = 16; // Width of '0' (ensure this is an even number for integer radius_x_0)
   const radius_x_0 = width_0 / 2; // X radius for '0'
   const width_1 = 4; // Width of '1'
   const spacing = 7; // Spacing between characters
@@ -41,6 +41,7 @@ export default function HomePage() {
       current_x += width_0 + spacing;
     } else if (char === '1') {
       const dx = current_x + width_1 / 2;
+      // Draw '1' as a vertical line of the same height as '0'
       path_d += `M${dx},${y_val - radius_y} L${dx},${y_val + radius_y} `;
       current_x += width_1 + spacing;
     }
@@ -48,7 +49,7 @@ export default function HomePage() {
   const viewBoxWidth = current_x + 10 - spacing; // Remove last spacing and add right margin
 
   return (
-    <div className="space-y-12 flex-grow">
+    <div className="flex-grow">
       <section aria-labelledby="page-introduction" className="flex flex-col items-center sm:px-6 lg:px-8 pt-8 mb-12">
         <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-40 h-auto" />
         <h1 id="page-title" className="text-4xl sm:text-5xl font-bold text-center text-primary">
@@ -141,8 +142,8 @@ export default function HomePage() {
         <div className="w-full flex justify-center my-12 px-4">
           <svg
             width="100%"
-            height="50" // Adjusted from 30
-            viewBox={`0 0 ${viewBoxWidth} 50`} // Adjusted viewBox height from 40
+            height="50"
+            viewBox={`0 0 ${viewBoxWidth} 50`}
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             className="max-w-lg text-gray-400"
@@ -158,7 +159,40 @@ export default function HomePage() {
           </svg>
         </div>
 
-        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 mb-12">
+        {/* Gavel SVG - New */}
+        <div className="w-full flex justify-center my-8 px-4">
+          <svg
+            width="100" 
+            height="100"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            className="text-gray-400" 
+          >
+            {/* Gavel Head */}
+            <rect x="10" y="20" width="80" height="30" rx="5" ry="5" fill="currentColor" />
+            {/* Gavel Handle */}
+            <rect x="42" y="48" width="16" height="45" rx="3" ry="3" fill="currentColor" />
+
+            {/* Decorative 0s and 1s on Gavel Head */}
+            {/* '0' - circle */}
+            <circle cx="25" cy="35" r="3" fill="hsl(var(--background))" /> 
+            <circle cx="50" cy="35" r="3" fill="hsl(var(--background))" />
+            <circle cx="75" cy="35" r="3" fill="hsl(var(--background))" />
+            
+            {/* '1' - line */}
+            <line x1="35" y1="30" x2="35" y2="40" stroke="hsl(var(--background))" strokeWidth="2" strokeLinecap="round" />
+            <line x1="60" y1="30" x2="60" y2="40" stroke="hsl(var(--background))" strokeWidth="2" strokeLinecap="round" />
+
+            {/* Decorative 0s and 1s on Gavel Handle */}
+             <circle cx="50" cy="60" r="2.5" fill="hsl(var(--background))" />
+             <line x1="50" y1="70" x2="50" y2="78" stroke="hsl(var(--background))" strokeWidth="1.5" strokeLinecap="round" />
+             <circle cx="50" cy="85" r="2.5" fill="hsl(var(--background))" />
+          </svg>
+        </div>
+
+
+        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-8 mb-12">
           <h2 className="text-3xl font-semibold text-gray-200 mb-6 text-center">
             Artigos mais recentes
           </h2>
@@ -174,3 +208,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
