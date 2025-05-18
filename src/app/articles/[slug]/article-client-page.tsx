@@ -63,7 +63,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
                 Voltar para os artigos
               </Link>
             </Button>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-4 leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary mb-4 leading-tight">
               {article.title}
             </h1>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground mb-6">
