@@ -160,7 +160,7 @@ export default function HomePage() {
         </div>
 
         <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-8 mb-12">
-          <h2 className="text-3xl font-semibold text-gray-200 mb-6 text-center">
+          <h2 className="text-4xl font-semibold text-gray-200 mb-6 text-center">
             Artigos mais recentes
           </h2>
           <ScrollArea className="h-[1536px] w-full rounded-lg border border-gray-600 p-4 bg-gray-700/50 shadow-md">
