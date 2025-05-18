@@ -99,6 +99,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
                   fill
                   style={{objectFit: "cover"}}
                   priority
+                  sizes="(max-width: 768px) 100vw, 768px"
                   data-ai-hint="article cover"
                 />
               </div>

@@ -30,10 +30,11 @@ export function getArticleBySlug(slug: string): Article | null {
       } else {
         // Assumes local image filename, prepend path
         const imageName = trimmedImage.startsWith('/') ? trimmedImage.substring(1) : trimmedImage;
-        imageUrl = `/${imageName}`;
+        imageUrl = `/images/articles/${imageName}`; // Path for local images
       }
     } else {
-      imageUrl = 'https://placehold.co/1200x630.pngsizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"'; // Default placeholder
+      // Default placeholder if no image is specified or if rawImage is empty/null
+      imageUrl = 'https://placehold.co/1200x630.png'; // Corrected placeholder URL
     }
 
     return {

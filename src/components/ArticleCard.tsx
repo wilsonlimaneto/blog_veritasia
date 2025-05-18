@@ -40,14 +40,17 @@ export default function ArticleCard({ article }: ArticleCardProps) {
               fill
               style={{objectFit: "cover"}}
               className="transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               data-ai-hint="technology abstract"
             />
           </div>
         </CardHeader>
         <CardContent className="p-6 flex-grow">
-          <CardTitle className="text-lg lg:text-xl mb-3 leading-tight line-clamp-3 group-hover:text-primary transition-colors">
-            {article.title}
-          </CardTitle>
+          <Link href={`/articles/${article.slug}`} className="group/title-link">
+            <CardTitle className="text-lg lg:text-xl mb-3 leading-tight line-clamp-3 group-hover/title-link:text-primary transition-colors">
+              {article.title}
+            </CardTitle>
+          </Link>
           <CardDescription className="text-muted-foreground text-sm mb-4 line-clamp-2">
             {article.description}
           </CardDescription>
