@@ -1,11 +1,8 @@
 import Link from 'next/link';
 import { Globe, MessageCircle } from 'lucide-react';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+// Removed Tooltip imports as they are no longer used for the WhatsApp link specifically
+// If other tooltips are present, these imports might still be needed.
+// For now, assuming this was the only tooltip usage in this component.
 
 export default function SiteHeader() {
   return (
@@ -15,9 +12,9 @@ export default function SiteHeader() {
           <img src="/oie_pnD9PzjNbeOy.png" alt="SiteGeadres logo" className="h-7" />
         </Link>
         
-        <div className="flex items-center gap-4"> {/* Reduced gap for potentially more items */}
+        <div className="flex items-center gap-4"> 
 
-          <div className="flex items-center gap-4"> {/* Group for Site and WhatsApp links */}
+          <div className="flex items-center gap-4"> 
             <Link
               href="https://ia.maestrialaw.com.br"
               target="_blank"
@@ -28,24 +25,15 @@ export default function SiteHeader() {
               <span className="font-bold">Site</span>
             </Link>
 
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href="#" /* Substitua pelo link real do WhatsApp */
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-white hover:text-primary/80 transition-colors text-sm"
-                  >
-                    <MessageCircle className="mr-2 h-4 w-4" />
-                    <span className="font-bold">Entre no Grupo de Discussão</span>
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>(Para Engenheiros e Advogados)</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+            <Link
+              href="https://chat.whatsapp.com/DqpPsULCjyg9UYrQQnHGRp"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center text-white hover:text-primary/80 transition-colors text-sm"
+            >
+              <MessageCircle className="mr-2 h-4 w-4" />
+              <span className="font-bold">Entre no Grupo de Discussão</span>
+            </Link>
           </div>
         </div>
       </div>

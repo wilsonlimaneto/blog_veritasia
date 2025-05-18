@@ -1,9 +1,9 @@
 ---
-title: "Integrating Genkit for AI-Powered Features"
-description: "A practical guide to integrating Genkit into your Next.js application to leverage powerful AI models for various tasks."
+title: "Dos riscos de privacidade ao utilizar-se das IAs Genéricas e como se proteger para evitar surpresas"
+description: "Fique atento aos termos de uso das IAs das Big Techs e evite que seus dados mais importantes, estratégicos e sensíveis sejam disponibilizados."
 date: "2025-04-25"
 image: "Genkit+Integration"
-author: "Cristian Brutten"
+author: "Wilson Neto"
 ---
 
 ## Introduction to Genkit
