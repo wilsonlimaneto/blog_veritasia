@@ -60,7 +60,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
             <Button variant="ghost" size="sm" asChild className="mb-6 text-primary hover:text-primary/80">
               <Link href="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Articles
+                Voltar para os artigos
               </Link>
             </Button>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-4 leading-tight">
@@ -73,7 +73,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
               </div>
               <div className="flex items-center">
                 <UserCircle className="mr-2 h-4 w-4" />
-                <span>By Digital Pages Team</span> {/* Placeholder author */}
+                <span>Por Wilson Neto</span> {/* Placeholder author */}
               </div>
               <div className="flex items-center">
                 <button 
@@ -82,7 +82,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
                   className="text-primary hover:text-primary/80 transition-colors flex items-center bg-transparent border-none p-0 cursor-pointer"
                 >
                   <Share2 className="mr-1 h-4 w-4" />
-                  <span>Share</span>
+                  <span>Compartilhar</span>
                 </button>
                 {showCopyMessage && (
                   <span className="ml-3 px-2 py-1 text-xs bg-primary/10 text-primary rounded-md shadow-sm animate-fadeIn">
@@ -118,7 +118,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
             <Button variant="outline" asChild>
               <Link href="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Explore More Articles
+                Explore mais artigos
               </Link>
             </Button>
           </div>

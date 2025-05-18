@@ -49,20 +49,20 @@ export default function HomePage() {
 
   return (
     <div className="space-y-12 flex-grow"> {/* Removed specific background class here */}
-      <section aria-labelledby="page-introduction" className="flex flex-col items-center sm:px-6 lg:px-8 pt-8">
-        <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-32 h-auto" />
+      <section aria-labelledby="page-introduction" className="flex flex-col items-center sm:px-6 lg:px-8 pt-8 mb-12">
+        <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-40 h-auto" />
         <h1 id="page-title" className="text-4xl sm:text-5xl font-bold text-center text-primary">
-          Blog VeritasIA
+ Blog VeritasIA
         </h1>
         <h2 className="text-xl sm:text-2xl text-center text-gray-300 mb-8">
-          Desmistificando o Hype, revelando as meias-verdades das IAs Jurídicas
+          Desmistificando o Hype, Revelando as Meias-Verdades das IAs Jurídicas
         </h2>
 
         <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-8">
           <Accordion type="multiple" className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["item-1"]}>
             <AccordionItem value="item-1" className="border-b-0">
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-gray-200 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
-                Minibio (Currículo dos Responsáveis pelo conteúdo)
+                Conheça os Autores
               </AccordionTrigger>
               <AccordionContent className="px-6 py-4 text-gray-300">
                 {/* Author 1 */}
@@ -78,9 +78,9 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="text-center sm:text-left">
-                    <h3 className="text-xl font-bold text-gray-100 mb-2">Dr. Fulano de Tal</h3>
+                    <h3 className="text-xl font-bold text-gray-100 mb-2">Wilson Neto</h3>
                     <p className="text-sm leading-relaxed">
-                      Profissional com vasta experiência em Direito, dedicado a analisar e desmistificar as aplicações de Inteligência Artificial no setor jurídico. Meu objetivo é fornecer informações claras e precisas para advogados e gestores jurídicos.
+                      Formado em Engenharia de Computação pela UFRN (2005) e em Direito pelo Mackenzie (2020), possuo um vasto conhecimento técnico para compreender as capacidades e limitações da IA, garantindo informações claras e precisas para advogados e gestores jurídicos sobre o que a tecnologia pode entregar com qualidade e sem alucinações.
                     </p>
                   </div>
                 </div>
@@ -98,9 +98,9 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="text-center sm:text-left">
-                    <h3 className="text-xl font-bold text-gray-100 mb-2">Eng. Ciclano da Silva</h3>
+                    <h3 className="text-xl font-bold text-gray-100 mb-2">Cristian Brutten</h3>
                     <p className="text-sm leading-relaxed">
-                      Especialista em Engenharia de Computação com foco em Inteligência Artificial. Dedico-me a explorar e explicar as tecnologias por trás das IAs jurídicas, ajudando a traduzir o complexo para o compreensível.
+                    Empreendedor serial com dupla cidadania brasileira e americana. Investidor estratégico em empresas inovadoras. Sua visão de negócios foi aprimorada com um MBA por Harvard. Sua paixão por conhecimento o levou a formar-se em Odontologia por Harvard e em Música por Yale, demonstrando uma rara combinação de habilidades e interesses.
                     </p>
                   </div>
                 </div>
@@ -119,11 +119,18 @@ export default function HomePage() {
                 <div className="flex items-start gap-4">
                   <AlertTriangle className="h-16 w-16 text-yellow-500 flex-shrink-0" />
                   <div className="flex-grow">
-                    <p style={{ color: 'white' }}>Este conteúdo é desenvolvido e mantido por profissionais com 2 diplomas (Direito + Engenharia de Computação).</p>
-                    <center><p style={{ color: 'white' }}> - </p></center>
-                    <p style={{ color: 'white' }}>Se preferir acreditar em sensacionalismo de rede social (Tenha um Exército de Advogados trabalhando por vocês 24h/dia), em hype ou em produtos montados apenas em cima do ChatGPT, sugerimos não perder tempo lendo as verdades abaixo!</p>
-                    <center><p style={{ color: 'white' }}> - </p></center>
-                    <p style={{ color: 'white' }}>O nosso principal objetivo é evitar que as mentiras contadas cansem o mercado e prejudiquem as Legaltechs que, de fato, agregam valor ao dia a dia da advocacia brasileira!</p>
+                    <p style={{ color: 'white' }}>
+                      Conteúdo técnico-jurídico sobre IA no Direito, elaborado por profissionais com formação em Direito e Engenharia de Computação.
+                    </p>
+                    <p style={{ color: 'white' }}>
+                      Nosso objetivo é oferecer uma análise precisa e fundamentada, diferenciando o potencial real da IA de promessas exageradas ou soluções superficiais baseadas apenas em ChatGPT (ou cursos de prompt/agentes de IA).
+                    </p>
+                    <p style={{ color: 'white' }}>
+                      Se você busca sensacionalismo ou resultados irreais, este blog pode não ser para você.
+                    </p>
+                    <p style={{ color: 'white' }}>
+                      Nosso compromisso é promover um entendimento responsável da IA no Direito, valorizando as Legaltechs que realmente agregam valor à advocacia.
+                    </p>
                   </div>
                 </div>
               </AccordionContent>
@@ -131,14 +138,15 @@ export default function HomePage() {
           </Accordion>
         </div>
         
-        <div className="w-full flex justify-center my-6 px-4">
+        <div className="w-full flex justify-center my-12 px-4">
           <svg
             width="100%"
             height="30"
-            viewBox={`0 0 ${viewBoxWidth} 50`}
+            viewBox={`0 0 ${viewBoxWidth} 40`}
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
-            className="max-w-lg text-gray-400" 
+            className="max-w-lg text-gray-400"
+            
           >
             <path
               d={path_d.trim()}
@@ -151,7 +159,7 @@ export default function HomePage() {
           </svg>
         </div>
 
-        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-8 mb-8">
+        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 mb-12">
           <h2 className="text-3xl font-semibold text-gray-200 mb-6 text-center">
             Artigos mais recentes
           </h2>

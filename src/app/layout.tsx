@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Digital Pages - A Modern Blog',
-  description: 'Explore insightful articles on technology, design, and more.',
+  title: 'VeritasIA Blog',
+  description: 'Revelando o que é fato e o que é fake no mundo das IAs Jurídicas',
 };
 
 export default function RootLayout({
