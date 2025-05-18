@@ -41,7 +41,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
               style={{objectFit: "cover"}}
               className="transition-transform duration-300 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              data-ai-hint="technology abstract"
+              data-ai-hint="article image"
             />
           </div>
         </CardHeader>
