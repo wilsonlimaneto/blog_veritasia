@@ -29,8 +29,8 @@ export default function HomePage() {
   const y_val = 25; // Center Y for characters
   const char_h = 20; // Height of characters
   const radius_y = char_h / 2;
-  const width_0 = 15; // Width of '0'
-  const radius_x_0 = width_0 / 2;
+  const width_0 = 16; // Width of '0', changed from 15 to 16
+  const radius_x_0 = width_0 / 2; // X radius for '0', now 8
   const width_1 = 4; // Width of '1'
   const spacing = 7; // Spacing between characters
 
@@ -62,7 +62,7 @@ export default function HomePage() {
           <Accordion type="multiple" className="w-full bg-gray-700/50 rounded-lg shadow-md border border-gray-600" defaultValue={["item-1"]}>
             <AccordionItem value="item-1" className="border-b-0">
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-gray-200 hover:no-underline hover:bg-gray-600/50 rounded-t-lg">
-                Conheça os Autores
+                Minibio (Currículo dos Responsáveis pelo conteúdo)
               </AccordionTrigger>
               <AccordionContent className="px-6 py-4 text-gray-300">
                 {/* Author 1 */}
@@ -146,7 +146,6 @@ export default function HomePage() {
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             className="max-w-lg text-gray-400"
-            
           >
             <path
               d={path_d.trim()}
