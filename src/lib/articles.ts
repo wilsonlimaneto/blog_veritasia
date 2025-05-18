@@ -1,3 +1,4 @@
+
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -23,12 +24,12 @@ export function getArticleBySlug(slug: string): Article | null {
     const rawImage = data.image;
 
     if (rawImage && typeof rawImage === 'string' && rawImage.trim() !== '') {
-      if (rawImage.startsWith('http://') || rawImage.startsWith('https://')) {
-        imageUrl = rawImage; // Use external URL directly
+      const trimmedImage = rawImage.trim();
+      if (trimmedImage.startsWith('http://') || trimmedImage.startsWith('https://')) {
+        imageUrl = trimmedImage; // Use external URL directly
       } else {
         // Assumes local image filename, prepend path
-        // Ensure no leading slash from rawImage if it's just a filename
-        const imageName = rawImage.startsWith('/') ? rawImage.substring(1) : rawImage;
+        const imageName = trimmedImage.startsWith('/') ? trimmedImage.substring(1) : trimmedImage;
         imageUrl = `/images/articles/${imageName}`;
       }
     } else {
