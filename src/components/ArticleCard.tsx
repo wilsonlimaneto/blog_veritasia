@@ -46,11 +46,9 @@ export default function ArticleCard({ article }: ArticleCardProps) {
           </div>
         </CardHeader>
         <CardContent className="p-6 flex-grow">
-          <Link href={`/articles/${article.slug}`} className="group/title-link">
-            <CardTitle className="text-lg lg:text-xl mb-3 leading-tight line-clamp-3 group-hover/title-link:text-primary transition-colors">
-              {article.title}
-            </CardTitle>
-          </Link>
+          <CardTitle className="text-lg lg:text-xl mb-3 leading-tight line-clamp-3 group-hover:text-primary transition-colors">
+            {article.title}
+          </CardTitle>
           <CardDescription className="text-muted-foreground text-sm mb-4 line-clamp-2">
             {article.description}
           </CardDescription>
