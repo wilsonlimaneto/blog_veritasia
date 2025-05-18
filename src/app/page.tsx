@@ -52,7 +52,7 @@ export default function HomePage() {
     <div className="flex-grow">
       <section aria-labelledby="page-introduction" className="flex flex-col items-center sm:px-6 lg:px-8 pt-8 mb-12">
         <img src="/Gemini_Generated_Image_6rww6n6rww6n6rww-removebg-preview.png" alt="Blog VeritasIA logo" className="mx-auto mb-4 w-40 h-auto" />
-        <h1 id="page-title" className="text-4xl sm:text-5xl font-bold text-center text-primary">
+        <h1 id="page-title" className="text-3xl sm:text-4xl font-bold text-center text-primary">
  Blog VeritasIA
         </h1>
         <h2 className="text-xl sm:text-2xl text-center text-gray-300 mb-8">

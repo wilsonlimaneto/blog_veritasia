@@ -4,9 +4,7 @@ description: "Primeiro o ChatGPT inventa, depois surgem funcionalidades de Busca
 date: "2025-05-17"
 image: "https://placehold.co/1200x630.png"
 ---
-<style>
-a:hover { text-decoration: underline; }
-</style>
+
 ### Em resumo, se você precisa encontrar julgados com um maior grau de confiança, desista do ChatGPT, Gemini, Grok e de qualquer outra IA Genérica.
 
 Diariamente, milhares de julgados são publicados. O Direito, principalmente num contexto de common-law, se manifesta por meio destas publicações. Porém, os mecanismos de pesquisa em sistemas de jurisprudência, que envolvam quaisquer dessas IAs genéricas, não garantirá uma pesquisa assertiva. Segue o raciocínio...
