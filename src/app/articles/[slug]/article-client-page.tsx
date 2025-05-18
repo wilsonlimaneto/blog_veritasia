@@ -10,7 +10,6 @@ import { CalendarDays, UserCircle, ArrowLeft, Share2 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect, type MouseEvent } from 'react';
 
 type ArticleClientPageProps = {
@@ -18,8 +17,9 @@ type ArticleClientPageProps = {
 };
 
 export default function ArticleClientPage({ article }: ArticleClientPageProps) {
-  const { toast } = useToast();
   const [currentUrl, setCurrentUrl] = useState('');
+  const [showCopyMessage, setShowCopyMessage] = useState(false);
+  const [copyMessageText, setCopyMessageText] = useState('');
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -27,23 +27,23 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
     }
   }, []);
 
-  const handleShare = async (event: MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
-    event.preventDefault(); 
+  const handleShare = async (event: MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
     if (!currentUrl) return;
 
     try {
       await navigator.clipboard.writeText(currentUrl);
-      toast({
-        title: "Copiado!",
-        description: "Link do artigo copiado para a área de transferência.",
-      });
+      setCopyMessageText("Copiado!");
+      setShowCopyMessage(true);
     } catch (err) {
       console.error('Failed to copy: ', err);
-      toast({
-        title: "Erro",
-        description: "Não foi possível copiar o link.",
-        variant: "destructive",
-      });
+      setCopyMessageText("Erro ao copiar!");
+      setShowCopyMessage(true);
+    } finally {
+      setTimeout(() => {
+        setShowCopyMessage(false);
+        setCopyMessageText(''); 
+      }, 3000);
     }
   };
 
@@ -71,7 +71,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
                 <span>By Digital Pages Team</span> {/* Placeholder author */}
               </div>
               <div className="flex items-center">
-                <button // Changed Link to button for better semantics with onClick
+                <button 
                   onClick={handleShare}
                   aria-label="Share this article"
                   className="text-primary hover:text-primary/80 transition-colors flex items-center bg-transparent border-none p-0 cursor-pointer"
@@ -79,6 +79,11 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
                   <Share2 className="mr-1 h-4 w-4" />
                   <span>Share</span>
                 </button>
+                {showCopyMessage && (
+                  <span className="ml-3 px-2 py-1 text-xs bg-primary/10 text-primary rounded-md shadow-sm animate-fadeIn">
+                    {copyMessageText}
+                  </span>
+                )}
               </div>
             </div>
             {article.image && (
