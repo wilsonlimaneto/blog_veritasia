@@ -20,12 +20,17 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
   const [currentUrl, setCurrentUrl] = useState('');
   const [showCopyMessage, setShowCopyMessage] = useState(false);
   const [copyMessageText, setCopyMessageText] = useState('');
+  const [displayDate, setDisplayDate] = useState<string | null>(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setCurrentUrl(window.location.href);
     }
-  }, []);
+    // Defer date formatting to client-side to avoid hydration mismatch
+    if (article?.date) {
+      setDisplayDate(format(new Date(article.date), 'MMMM d, yyyy'));
+    }
+  }, [article?.date]);
 
   const handleShare = async (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -64,7 +69,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground mb-6">
               <div className="flex items-center">
                 <CalendarDays className="mr-2 h-4 w-4" />
-                <span>{format(new Date(article.date), 'MMMM d, yyyy')}</span>
+                <span>{displayDate ? displayDate : 'Processing date...'}</span>
               </div>
               <div className="flex items-center">
                 <UserCircle className="mr-2 h-4 w-4" />
