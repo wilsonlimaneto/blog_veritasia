@@ -34,14 +34,29 @@ export function getArticleBySlug(slug: string): Article | null {
       }
     } else {
       // Default placeholder if no image is specified or if rawImage is empty/null
-      imageUrl = 'https://placehold.co/1200x630.png'; // Corrected placeholder URL
+      imageUrl = 'https://placehold.co/1200x630.png';
+    }
+
+    let articleDate: string;
+    if (data.date) {
+      const parsedDate = new Date(data.date);
+      // Check if the date is valid
+      if (!isNaN(parsedDate.getTime())) {
+        articleDate = parsedDate.toISOString();
+      } else {
+        console.warn(`Invalid date format for article "${slug}": "${data.date}". Using current date as fallback.`);
+        articleDate = new Date().toISOString();
+      }
+    } else {
+      // If no date is provided, default to the current date
+      articleDate = new Date().toISOString();
     }
 
     return {
       slug,
       title: data.title || 'Untitled Article',
       description: data.description || '',
-      date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
+      date: articleDate,
       image: imageUrl,
       author: data.author || 'Blog Author',
       content,
