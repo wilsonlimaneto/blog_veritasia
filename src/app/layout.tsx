@@ -76,6 +76,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17085433831"></script>
+        <script type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-17085433831');`,
+          }}
+        />
+
+
+      </head> 
       <body className={`${inter.variable} antialiased flex flex-col min-h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900`}>
         <SiteHeader />
         <main className="flex-grow">
