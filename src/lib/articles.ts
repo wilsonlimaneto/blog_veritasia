@@ -27,10 +27,12 @@ export function getArticleBySlug(slug: string): Article | null {
       const trimmedImage = rawImage.trim();
       if (trimmedImage.startsWith('http://') || trimmedImage.startsWith('https://')) {
         imageUrl = trimmedImage; // Use external URL directly
+      } else if (trimmedImage.startsWith('/')) {
+        // Assume it's a correct root-relative path from the public directory
+        imageUrl = trimmedImage; 
       } else {
-        // Assumes local image filename, prepend path
-        const imageName = trimmedImage.startsWith('/') ? trimmedImage.substring(1) : trimmedImage;
-        imageUrl = `/images/articles/${imageName}`; // Path for local images
+        // Assumes local image filename (e.g., "my-image.png"), prepend standard path
+        imageUrl = `/images/articles/${trimmedImage}`; 
       }
     } else {
       // Default placeholder if no image is specified or if rawImage is empty/null
