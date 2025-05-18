@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { format } from 'date-fns';
 import { CalendarDays, ArrowRight } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type ArticleCardProps = {
   article: Article;
@@ -15,6 +15,14 @@ type ArticleCardProps = {
 
 export default function ArticleCard({ article }: ArticleCardProps) {
   const [isLoading, setIsLoading] = useState(false);
+  const [displayDate, setDisplayDate] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Defer date formatting to client-side to avoid hydration mismatch
+    if (article?.date) {
+      setDisplayDate(format(new Date(article.date), 'MMMM d, yyyy'));
+    }
+  }, [article?.date]);
 
   return (
     <Link
@@ -47,7 +55,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         <CardFooter className="p-6 pt-0 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div className="flex items-center text-xs text-muted-foreground">
             <CalendarDays className="mr-2 h-4 w-4" />
-            <span>{format(new Date(article.date), 'MMMM d, yyyy')}</span>
+            <span>{displayDate || 'Loading date...'}</span>
           </div>
           <div className="inline-flex items-center text-primary group-hover:underline text-sm font-bold">
             <span className="font-bold">Leia</span>
