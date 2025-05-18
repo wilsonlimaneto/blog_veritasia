@@ -75,6 +75,7 @@ export default function HomePage() {
                       fill
                       style={{objectFit: "cover"}}
                       className="rounded-full"
+                      sizes="(max-width: 639px) 96px, 112px"
                       data-ai-hint="profile photo"
                     />
                   </div>
@@ -95,6 +96,7 @@ export default function HomePage() {
                       fill
                       style={{objectFit: "cover"}}
                       className="rounded-full"
+                      sizes="(max-width: 639px) 96px, 112px"
                       data-ai-hint="profile photo"
                     />
                   </div>

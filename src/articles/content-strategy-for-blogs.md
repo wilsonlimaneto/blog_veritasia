@@ -2,7 +2,7 @@
 title: "A verdade (e aspectos técnicos) sobre a Busca de Jurisprudência por IA"
 description: "Primeiro o ChatGPT inventa, depois surgem funcionalidades de Busca e Investigação (Deep Search e/ou Pesquisa Profunda). Como funciona e até onde estas pesquisas podem ajudar você advogado."
 date: "2025-05-17"
-image: "search-engine.png"
+image: "search_engine.png"
 author: "Wilson Lima"
 ---
 
