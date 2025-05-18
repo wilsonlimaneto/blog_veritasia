@@ -22,6 +22,7 @@ export function getArticleBySlug(slug: string): Article | null {
       description: data.description || '',
       date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
       image: data.image || `https://placehold.co/600x400.png`,
+      author: data.author || 'Blog Author', // Added author field here
       content,
     } as Article;
   } catch (error) {
