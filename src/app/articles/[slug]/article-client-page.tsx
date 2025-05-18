@@ -14,9 +14,11 @@ import { useState, useEffect, type MouseEvent } from 'react';
 
 type ArticleClientPageProps = {
   article: Article;
+  canonicalUrl: string;
+  absoluteImageUrl: string;
 };
 
-export default function ArticleClientPage({ article }: ArticleClientPageProps) {
+export default function ArticleClientPage({ article, canonicalUrl, absoluteImageUrl }: ArticleClientPageProps) {
   const [currentUrl, setCurrentUrl] = useState('');
   const [showCopyMessage, setShowCopyMessage] = useState(false);
   const [copyMessageText, setCopyMessageText] = useState('');
@@ -26,7 +28,6 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
     if (typeof window !== 'undefined') {
       setCurrentUrl(window.location.href);
     }
-    // Defer date formatting to client-side to avoid hydration mismatch
     if (article?.date) {
       setDisplayDate(format(new Date(article.date), 'MMMM d, yyyy'));
     }
@@ -52,8 +53,41 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
     }
   };
 
+  const siteBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:9002';
+  const publisherLogoUrl = `${siteBaseUrl}/oie_pnD9PzjNbeOy.png`; // Assuming your logo is here
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.description,
+    "image": [absoluteImageUrl],
+    "datePublished": article.date, // ISO 8601 format
+    "dateModified": article.date, // Assuming date is also last modified date, update if different
+    "author": {
+      "@type": "Person",
+      "name": article.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "VeritasIA Blog",
+      "logo": {
+        "@type": "ImageObject",
+        "url": publisherLogoUrl
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalUrl
+    }
+  };
+
   return (
     <div className="flex-grow py-12 px-4 sm:px-6 lg:px-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="bg-card text-card-foreground p-6 sm:p-8 rounded-lg shadow-xl max-w-3xl mx-auto">
         <article>
           <header className="mb-8">
@@ -100,7 +134,7 @@ export default function ArticleClientPage({ article }: ArticleClientPageProps) {
                   style={{objectFit: "cover"}}
                   sizes="(max-width: 768px) 100vw, 768px"
                   data-ai-hint="article cover"
-                  priority // Re-added priority
+                  priority
                 />
               </div>
             )}
